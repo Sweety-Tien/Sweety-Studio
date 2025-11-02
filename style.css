@@ -1,0 +1,236 @@
+/* ===== 背景設定 ===== */
+html, body {
+  min-height: 100vh;
+  height: 100%;
+  background: linear-gradient(180deg, #fffafa 0%, #ffe4e1 100%),
+              url('https://www.transparenttextures.com/patterns/white-diamond.png');
+  background-blend-mode: soft-light;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ===== Base ===== */
+*{box-sizing:border-box}
+body{
+  font-family:'Quicksand','Noto Sans TC',sans-serif;
+  margin:0; color:#4b3c3c;
+  animation: fadeIn 420ms ease-in;
+}
+@keyframes fadeIn{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
+
+.container{max-width:1100px; margin:0 auto; padding:1.25rem}
+
+/* ===== Navbar ===== */
+.navbar{
+  position:sticky; top:0; z-index:999;
+  background:#fffafaee; backdrop-filter:saturate(140%) blur(6px);
+  border-bottom:3px solid #ffd6e8;
+  box-shadow:0 4px 14px rgba(255,182,193,.28);
+}
+.nav-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; max-width:1100px; margin:0 auto; padding:.8rem 1rem;
+}
+.brand{font-weight:800; color:#e75480; text-decoration:none}
+.nav-list{
+  list-style:none; display:flex; gap:1.3rem; margin:0; padding:0; flex-wrap:wrap;
+}
+.nav-list a{
+  text-decoration:none; color:#d87093; font-weight:700;
+  padding:.45rem .8rem; border-radius:12px;
+  transition:all .25s ease;
+}
+.nav-list a:hover{
+  color:#fff; background:#ffb6c1; box-shadow:0 6px 16px rgba(255,182,193,.45);
+}
+
+/* ===== Header ===== */
+header{
+  text-align:center; background:#ffb7c4;
+  color:#fff; padding:2rem 1rem;
+  border-bottom:5px solid #ffc0cb; border-radius:0 0 26px 26px;
+  box-shadow:0 6px 18px rgba(255,182,193,.35); margin-bottom:1rem;
+}
+header h1{margin:.2rem 0 0; font-size:2.1rem}
+header p{opacity:.95; margin:.4rem 0 0}
+
+/* ===== Product Grid ===== */
+.product-grid{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1.5rem; padding:1.5rem;
+}
+.product-card{
+  background:#fffafa; border-radius:18px; text-align:center; padding:1rem;
+  box-shadow:0 6px 16px rgba(255,182,193,.3);
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+.product-card:hover{
+  transform:translateY(-6px) scale(1.01);
+  box-shadow:0 10px 24px rgba(255,182,193,.45);
+}
+.product-card img{
+  width:100%; height:200px; object-fit:cover; border-radius:14px; margin-bottom:.7rem;
+}
+.product-card h3{color:#ff69b4; font-size:1.2rem; margin:.3rem 0}
+.price{color:#e75480; font-weight:800}
+
+/* ===== Footer ===== */
+footer{
+  background:#ffb6c1; color:#fff; text-align:center; padding:1rem;
+  border-radius:24px 24px 0 0; margin-top:2rem;
+  box-shadow:0 -6px 18px rgba(255,182,193,.35);
+}
+
+/* ===== Page Specific cute backgrounds ===== */
+/*.page-about body, body.page-about{background-image:url('https://www.transparenttextures.com/patterns/graphy.png')}
+.page-all body, body.page-all{background-image:url('https://www.transparenttextures.com/patterns/white-diamond.png')}
+.page-jasper body, body.page-jasper{background-image:url('https://www.transparenttextures.com/patterns/tiny-grid.png')}
+.page-crochet body, body.page-crochet{background-image:url('https://www.transparenttextures.com/patterns/paper-fibers.png')}
+.page-course body, body.page-course{background-image:url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png')}*/
+
+/* ===== Section generic ===== */
+.section{
+  max-width:900px; margin:0 auto; padding:2rem 1.5rem;
+  text-align:center; background:#ffffffcc;
+  border-radius:18px;
+  box-shadow:0 6px 16px rgba(255,182,193,.25);
+}
+.section h2{color:#e75480}
+.section p{line-height:1.8}
+
+
+.cta-btn{
+  display:inline-block;
+  margin-top:1.2rem;
+  padding:.8rem 1.6rem;
+  background:#ff8fb8;
+  color:white;
+  border-radius:18px;
+  text-decoration:none;
+  font-weight:700;
+  transition:.25s;
+  box-shadow:0 6px 14px rgba(255,182,193,.35);
+}
+.cta-btn:hover{
+  transform:translateY(-3px);
+  background:#ff6fa5;
+  box-shadow:0 10px 20px rgba(255,182,193,.45);
+}
+
+.section-feature h2{
+  color:#e75480;
+  margin-bottom:1.8rem;
+}
+
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:1.6rem;
+  align-items:start; /* ← 這個很重要，避免高度拉扯 */
+  justify-items:center;
+}
+/* 手機版自動一欄 */
+@media(max-width:700px){
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+}
+.feature-card{
+  background:#fffcf7;;
+  border-radius:18px;
+  padding:1.6rem 1rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start; /* ← 不要置中，置中會因行數不同=亂 */
+  width:100%;
+  max-width:340px; /* 固定寬度，讓兩個排列更漂亮 */
+  min-height:200px; /* 用最小高度，不固定死 */
+  text-decoration:none;
+  color:#6c4b5c;
+  box-shadow:0 6px 16px rgba(255,182,193,.28);
+  transition:.28s all ease;
+}
+.feature-card:hover{
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 10px 26px rgba(255,182,193,.45);
+}
+.feature-card .icon{ font-size:2.2rem; margin-bottom:.5rem; }
+.feature-card h3{ color:#e75480; margin:.3rem 0 .4rem; }
+.feature-card p{ font-size:.9rem; opacity:.8; }
+
+.section-feature{
+  max-width:900px;
+  margin:0 auto 2rem; /* 從3rem縮小 */
+}
+
+.contact-section h2 {
+  color:#e75480;
+  margin-bottom:3rem;
+}
+.contact-section p{
+  opacity:.85;
+  margin-bottom:.5rem;
+}
+.contact-section{
+  margin-top:1.4rem; /* 加這個 */
+}
+.contact-btn{
+  background:#ff7fa8;
+}
+.contact-btn:hover{
+  background:#ff5e93;
+}
+
+.page-about .section{
+  margin-bottom:2rem; /* 原本是3rem → 改更緊致 */
+}
+
+/* lesson Pic */
+.lesson-gallery{
+  max-width:1000px;
+  margin:-0.5rem auto 1.5rem; /* 用負 margin 更貼上去 */
+  padding:1.2rem;
+  text-align:center;
+}
+
+.lesson-gallery h2{
+  color:#e75480;
+  margin-bottom:1rem;
+}
+
+.lesson-scroll{
+  display:flex;
+  gap:1rem;
+  overflow-x:auto;
+  padding-bottom:1rem;
+  scroll-snap-type:x mandatory;
+}
+
+.lesson-scroll img{
+  width:280px;
+  height:330px;
+  object-fit:cover;
+  border-radius:18px;
+  flex-shrink:0;
+  scroll-snap-align:center;
+  box-shadow:0 6px 14px rgba(255,182,193,0.35);
+  transition:.25s;
+}
+
+.lesson-scroll img:hover{
+  transform:scale(1.04) translateY(-4px);
+  box-shadow:0 10px 22px rgba(255,182,193,0.5);
+}
+
+/* hide horizontal scrollbar for mobile */
+.lesson-scroll::-webkit-scrollbar{
+  height:6px;
+  background:transparent;
+}
+.lesson-scroll::-webkit-scrollbar-thumb{
+  background:#ffb6c1;
+  border-radius:10px;
+}
