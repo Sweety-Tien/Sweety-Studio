@@ -109,10 +109,6 @@ footer{
   text-align:center;   
 }
 
-
-
-
-
 .cta-btn{
   display:inline-block;
   margin-top:1.2rem;
@@ -246,4 +242,19 @@ footer{
 .lesson-scroll::-webkit-scrollbar-thumb{
   background:#ffb6c1;
   border-radius:10px;
+}
+
+/* 手機 navbar spacing 修正 */
+@media(max-width:700px){
+  .nav-inner{
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .nav-list{
+    justify-content:center;
+    gap:0.9rem;
+  }
 }
