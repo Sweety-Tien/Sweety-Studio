@@ -95,9 +95,22 @@ footer{
   text-align:center; background:#ffffffcc;
   border-radius:18px;
   box-shadow:0 6px 16px rgba(255,182,193,.25);
+  margin-bottom: 3rem;
 }
-.section h2{color:#e75480}
+.section h2{
+  color:#e75480;
+  margin-bottom:1rem;
+}
 .section p{line-height:1.8}
+
+.section ul {
+  max-width: 550px;
+  margin: 0 auto;
+  text-align:center;   
+}
+
+
+
 
 
 .cta-btn{
