@@ -2,13 +2,14 @@
 html, body {
   min-height: 100vh;
   height: 100%;
-  background: linear-gradient(180deg, #fffafa 0%, #ffe4e1 100%),
+  background: linear-gradient(180deg, #fffafa 80px, #ffe4e1 100%),
               url('https://www.transparenttextures.com/patterns/white-diamond.png');
   background-blend-mode: soft-light;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 
 /* ===== Base ===== */
 *{box-sizing:border-box}
@@ -17,27 +18,30 @@ body{
   margin:0; color:#4b3c3c;
   animation: fadeIn 420ms ease-in;
 }
+
 @keyframes fadeIn{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
 
 .container{max-width:1100px; margin:0 auto; padding:1.25rem}
 
 /* ===== Navbar ===== */
+
 .navbar{
-  position: fixed;
+  position:fixed;
   top:0;
   left:0;
   width:100%;
   z-index:999;
-  background:#fffafaee;
-  backdrop-filter:saturate(140%) blur(6px);
-  border-bottom:3px solid #ffd6e8;
-  box-shadow:0 4px 14px rgba(255,182,193,.28);
+  background:#fffafa; /* 不要透明 / 不要 ee */
+  border-bottom:1px solid #ffd6e8; 
+  box-shadow:0 4px 8px rgba(255,182,193,0.18);
 }
 
 .nav-inner{
   display:flex; align-items:center; justify-content:space-between;
   gap:1rem; max-width:1100px; margin:0 auto; padding:.8rem 1rem;
+  padding:.65rem 1rem;
 }
+
 .brand{font-weight:800; color:#e75480; text-decoration:none}
 .nav-list{
   list-style:none; display:flex; gap:1.3rem; margin:0; padding:0; flex-wrap:wrap;
@@ -55,8 +59,11 @@ body{
 header{
   text-align:center; background:#ffb7c4;
   color:#fff; padding:2rem 1rem;
-  border-bottom:5px solid #ffc0cb; border-radius:0 0 26px 26px;
+  border-bottom:5px solid #ffc0cb; 
+  border-radius:0 0 26px 26px;
   box-shadow:0 6px 18px rgba(255,182,193,.35); margin-bottom:1rem;
+  margin-top:0; 
+  padding-top: 80px;
 }
 header h1{margin:.2rem 0 0; font-size:2.1rem}
 header p{opacity:.95; margin:.4rem 0 0}
@@ -499,10 +506,16 @@ footer{
   }
 }
 
+/*
 body.page-home,
 body.page-jesmonite,
 body.page-crochet,
 body.page-course,
 body.page-about {
-  padding-top:80px; /* 依照你 navbar 實際高度調整，大約 70~85 */
+  padding-top:80px; 
+}
+*/
+
+main.container{
+  padding-top:20px; /* navbar 高度 */
 }
