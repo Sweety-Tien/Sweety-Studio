@@ -68,6 +68,12 @@ header{
 header h1{margin:.2rem 0 0; font-size:2.1rem}
 header p{opacity:.95; margin:.4rem 0 0}
 
+@media(max-width:700px){
+  header{
+    padding-top:120px; /* mobile navbar比較高 */
+  }
+}
+
 /* ===== Product Grid ===== */
 
 /* 預設 PC 是 medium (3個) */
