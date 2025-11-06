@@ -29,30 +29,110 @@
   <main class="container">
     <section class="section">
       <h2>鉤織商品一覽</h2>
-      <div class="product-grid">
-        <div class="product-card"><img src="images/Strawberry.webp" alt="草莓" loading="lazy"><h3>草莓</h3><p class="price">NT$ 250</p></div>
-        <div class="product-card"><img src="images/Cake.webp" alt="蛋糕" loading="lazy"><h3>蛋糕</h3><p class="price">NT$ 250</p></div>
-        <div class="product-card"><img src="images/Egg.webp" alt="荷包蛋" loading="lazy"><h3>荷包蛋</h3><p class="price">NT$ 100</p></div>
-        <div class="product-card"><img src="images/GermanKnot.webp" alt="德國結" loading="lazy"><h3>德國結</h3><p class="price">NT$ 250</p></div>
-        <div class="product-card"><img src="images/ChristmasHat.webp" alt="聖誕帽" loading="lazy"><h3>聖誕帽</h3><p class="price">NT$ 150</p></div>
-        <div class="product-card"><img src="images/ChristmasTree.webp" alt="聖誕樹" loading="lazy"><h3>聖誕樹</h3><p class="price">NT$ 490</p></div>
-        <div class="product-card"><img src="images/Cactus.webp" alt="仙人掌" loading="lazy"><h3>仙人掌</h3><p class="price">NT$ 580</p></div>
-        <div class="product-card"><img src="images/Pumkin.webp" alt="南瓜" loading="lazy"><h3>南瓜</h3><p class="price">NT$ 250</p></div>
-        <div class="product-card"><img src="images/BearCookie.webp" alt="小熊餅乾" loading="lazy"><h3>小熊餅乾</h3><p class="price">NT$ 250</p></div>
-        <div class="product-card"><img src="images/Beer.webp" alt="啤酒" loading="lazy"><h3>啤酒</h3><p class="price">NT$ 350</p></div>
-        <div class="product-card"><img src="images/BalloonDog.webp" alt="氣球狗" loading="lazy"><h3>氣球狗</h3><p class="price">NT$ 680</p></div>
-        <div class="product-card"><img src="images/Carnation.webp" alt="康乃馨" loading="lazy"><h3>康乃馨</h3><p class="price">NT$ 250</p></div>
-        <div class="product-card"><img src="images/RoseCoaster.webp" alt="玫瑰杯墊組" loading="lazy"><h3>玫瑰杯墊組</h3><p class="price">NT$ 680</p></div>
-        <div class="product-card"><img src="images/FrenchFries.webp" alt="薯條" loading="lazy"><h3>薯條</h3><p class="price">NT$ 350</p></div>
-        <div class="product-card"><img src="images/Pizza.webp" alt="披薩" loading="lazy"><h3>披薩</h3><p class="price">NT$ 250</p></div>
-        <div class="product-card"><img src="images/Taiyaki.webp" alt="鯛魚燒" loading="lazy"><h3>鯛魚燒</h3><p class="price">NT$ 200</p></div>
-        <div class="product-card"><img src="images/mushroom.webp" alt="小蘑菇" loading="lazy"><h3>小蘑菇</h3><p class="price">NT$ 100</p></div>
+
+      <!-- 新增 density 控制 -->
+      <div class="view-select">
+        <label>顯示大小：</label>
+        <select id="viewMode" class="product-density-select"></select>
       </div>
+
+      <div class="product-grid" id="productGrid">
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/Strawberry.webp" alt="草莓" loading="lazy"></div>
+          <h3>草莓</h3><p class="price">NT$ 250</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/Cake.webp" alt="蛋糕" loading="lazy"></div>
+          <h3>蛋糕</h3><p class="price">NT$ 250</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/Egg.webp" alt="荷包蛋" loading="lazy"></div>
+          <h3>荷包蛋</h3><p class="price">NT$ 100</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/GermanKnot.webp" alt="德國結" loading="lazy"></div>
+          <h3>德國結</h3><p class="price">NT$ 250</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/ChristmasHat.webp" alt="聖誕帽" loading="lazy"></div>
+          <h3>聖誕帽</h3><p class="price">NT$ 150</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/ChristmasTree.webp" alt="聖誕樹" loading="lazy"></div>
+          <h3>聖誕樹</h3><p class="price">NT$ 490</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/Cactus.webp" alt="仙人掌" loading="lazy"></div>
+          <h3>仙人掌</h3><p class="price">NT$ 580</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/Pumkin.webp" alt="南瓜" loading="lazy"></div>
+          <h3>南瓜</h3><p class="price">NT$ 250</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/BearCookie.webp" alt="小熊餅乾" loading="lazy"></div>
+          <h3>小熊餅乾</h3><p class="price">NT$ 250</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/Beer.webp" alt="啤酒" loading="lazy"></div>
+          <h3>啤酒</h3><p class="price">NT$ 350</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/BalloonDog.webp" alt="氣球狗" loading="lazy"></div>
+          <h3>氣球狗</h3><p class="price">NT$ 680</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/Carnation.webp" alt="康乃馨" loading="lazy"></div>
+          <h3>康乃馨</h3><p class="price">NT$ 250</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/RoseCoaster.webp" alt="玫瑰杯墊組" loading="lazy"></div>
+          <h3>玫瑰杯墊組</h3><p class="price">NT$ 680</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/FrenchFries.webp" alt="薯條" loading="lazy"></div>
+          <h3>薯條</h3><p class="price">NT$ 350</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/Pizza.webp" alt="披薩" loading="lazy"></div>
+          <h3>披薩</h3><p class="price">NT$ 250</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/Taiyaki.webp" alt="鯛魚燒" loading="lazy"></div>
+          <h3>鯛魚燒</h3><p class="price">NT$ 200</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="images/mushroom.webp" alt="小蘑菇" loading="lazy"></div>
+          <h3>小蘑菇</h3><p class="price">NT$ 100</p>
+        </div>
+
+      </div>
+
     </section>
   </main>
 
   <footer>
     <p>© 2025 Sweety Studio | Made with love 💖</p>
   </footer>
+
+<script src="sweety.js"></script>
+
 </body>
 </html>

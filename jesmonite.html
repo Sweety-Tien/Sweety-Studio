@@ -25,23 +25,80 @@
   </header>
   <main class="container">
     <section class="section">
-      <h2>爵石系列</h2>
-      <div class="product-grid">
-        <div class="product-card"><img src="jesmonite_images/CircleVase.webp" alt="圓圓花瓶" loading="lazy"><h3>圓圓花瓶</h3><p class="price">NT$ 350</p></div>
-        <div class="product-card"><img src="jesmonite_images/FlowerPlate.webp" alt="小花盤" loading="lazy"><h3>小花盤</h3><p class="price">NT$ 450</p></div>
-        <div class="product-card"><img src="jesmonite_images/GourdVase.webp" alt="葫蘆花瓶" loading="lazy"><h3>葫蘆花瓶</h3><p class="price">NT$ 450</p></div>
-        <div class="product-card"><img src="jesmonite_images/HexagonalBox.webp" alt="六角盒" loading="lazy"><h3>六角盒</h3><p class="price">NT$ 180</p></div>
-        <div class="product-card"><img src="jesmonite_images/IrregularPlate.webp" alt="不規則大盤" loading="lazy"><h3>不規則大盤</h3><p class="price">NT$ 680</p></div>
-        <div class="product-card"><img src="jesmonite_images/OvalPlate.webp" alt="橢圓長盤" loading="lazy"><h3>橢圓長盤</h3><p class="price">NT$ 450</p></div>
-        <div class="product-card"><img src="jesmonite_images/PumpkinBox.webp" alt="南瓜盒" loading="lazy"><h3>南瓜盒</h3><p class="price">NT$ 650</p></div>
-        <div class="product-card"><img src="jesmonite_images/RectanglePlate.webp" alt="長方盤" loading="lazy"><h3>長方盤</h3><p class="price">NT$ 380</p></div>
-        <div class="product-card"><img src="jesmonite_images/WavePlate.webp" alt="波浪盤" loading="lazy"><h3>波浪盤</h3><p class="price">NT$ 450</p></div>
-        <div class="product-card"><img src="jesmonite_images/WaveVase.webp" alt="波浪花瓶" loading="lazy"><h3>波浪花瓶</h3><p class="price">NT$ 350</p></div>
+      <h2>爵石商品一覽</h2>
+
+      <!-- 新增 density 控制 -->
+      <div class="view-select">
+        <label>顯示大小：</label>
+        <select id="viewMode" class="product-density-select"></select>
       </div>
+
+      <div class="product-grid" id="productGrid">
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="jesmonite_images/CircleVase.webp" alt="圓圓花瓶" loading="lazy"></div>
+          <h3>圓圓花瓶</h3>
+          <p class="price">NT$ 350</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="jesmonite_images/FlowerPlate.webp" alt="小花盤" loading="lazy"></div>
+          <h3>小花盤</h3>
+          <p class="price">NT$ 450</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="jesmonite_images/GourdVase.webp" alt="葫蘆花瓶" loading="lazy"></div>
+          <h3>葫蘆花瓶</h3>
+          <p class="price">NT$ 450</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="jesmonite_images/HexagonalBox.webp" alt="六角盒" loading="lazy"></div>
+          <h3>六角盒</h3>
+          <p class="price">NT$ 180</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="jesmonite_images/IrregularPlate.webp" alt="不規則大盤" loading="lazy"></div>
+          <h3>不規則大盤</h3>
+          <p class="price">NT$ 680</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="jesmonite_images/OvalPlate.webp" alt="橢圓長盤" loading="lazy"></div>
+          <h3>橢圓長盤</h3>
+          <p class="price">NT$ 450</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="jesmonite_images/PumpkinBox.webp" alt="南瓜盒" loading="lazy"></div>
+          <h3>南瓜盒</h3>
+          <p class="price">NT$ 650</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="jesmonite_images/RectanglePlate.webp" alt="長方盤" loading="lazy"></div>
+          <h3>長方盤</h3>
+          <p class="price">NT$ 380</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="jesmonite_images/WavePlate.webp" alt="波浪盤" loading="lazy"></div>
+          <h3>波浪盤</h3>
+          <p class="price">NT$ 450</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap"><img src="jesmonite_images/WaveVase.webp" alt="波浪花瓶" loading="lazy"></div>
+          <h3>波浪花瓶</h3>
+          <p class="price">NT$ 350</p>
+        </div>
     </section>
   </main>
   <footer>
   <p>© 2025 Sweety Studio | Made with love 💖</p>
 </footer>
+<script src="sweety.js"></script>
 </body>
 </html>
